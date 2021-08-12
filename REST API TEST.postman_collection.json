@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "f1bb63e9-80b5-460a-91a8-5c0ddade6196",
+		"name": "REST API TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "\ncreate new Author",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/library/author/777http://localhost:8080/api/library/author/777",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"author",
+								"777http:",
+								"",
+								"localhost:8080",
+								"api",
+								"library",
+								"author",
+								"777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update existed Author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/author/777",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"author",
+								"777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Author object by 'authorId'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/author/777",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"author",
+								"777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Authors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/library/authors?orderType=asc&page=1&pagination=true&size=10&sortBy=authorId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"authors"
+							],
+							"query": [
+								{
+									"key": "orderType",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pagination",
+									"value": "true"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "authorId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " get all Authors in special Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre/17/authors?orderType=asc&page=500&pagination=true&size=10&sortBy=authorId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre",
+								"17",
+								"authors"
+							],
+							"query": [
+								{
+									"key": "orderType",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "500"
+								},
+								{
+									"key": "pagination",
+									"value": "true"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "authorId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search for author by it name and surname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/authors/search?query=ava",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"authors",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ava"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Author of special Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/book/5/author",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"book",
+								"5",
+								"author"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete existed Author",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/author/444?forcibly=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"author",
+								"444"
+							],
+							"query": [
+								{
+									"key": "forcibly",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "get Book object by 'bookId'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/book/51",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"book",
+								"51"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new Book",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/library/book/777/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"book",
+								"777",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update existed Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/book/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"book",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/books?orderType=asc&page=1&pagination=true&size=10&sortBy=bookId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"books"
+							],
+							"query": [
+								{
+									"key": "orderType",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pagination",
+									"value": "true"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "bookId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search for books by book name, return first 5 the most relevant results",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/books/search?q=dream",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"books",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "dream"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Books of special Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre/17/books?orderType=asc&page=1&pagination=true&size=10&sortBy=bookId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre",
+								"17",
+								"books"
+							],
+							"query": [
+								{
+									"key": "orderType",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pagination",
+									"value": "true"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "bookId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Books of special Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/author/777/books?orderType=asc&sortBy=bookId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"author",
+								"777",
+								"books"
+							],
+							"query": [
+								{
+									"key": "orderType",
+									"value": "asc"
+								},
+								{
+									"key": "sortBy",
+									"value": "bookId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Books of special Author in special Genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/author/777/genre/17/books",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"author",
+								"777",
+								"genre",
+								"17",
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete existed Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/book/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"book",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genre",
+			"item": [
+				{
+					"name": "create new Genre",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " get Genre object by 'genreId'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update existed Genre",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update existed Genre",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Genres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genres?orderType=asc&page=1&pagination=true&size=10&sortBy=genreId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genres"
+							],
+							"query": [
+								{
+									"key": "orderType",
+									"value": "asc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pagination",
+									"value": "true"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "genreId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search for genre by it genre name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genres/search?query=edu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genres",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "edu"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Genre object by 'genreId'",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Genre of special Book",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/book/5/genre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"book",
+								"5",
+								"genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all Genres of special Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/author/777/genres?orderType=asc&sortBy=genreId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"author",
+								"777",
+								"genres"
+							],
+							"query": [
+								{
+									"key": "orderType",
+									"value": "asc"
+								},
+								{
+									"key": "sortBy",
+									"value": "genreId"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete existed Genre",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/library/genre/16?forcibly=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"library",
+								"genre",
+								"16"
+							],
+							"query": [
+								{
+									"key": "forcibly",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

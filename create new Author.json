@@ -1,0 +1,14 @@
+{
+  "authorId": 777,
+  "authorName": {
+    "first": "Ihor",
+    "second": "Blinov"
+  },
+  "nationality": "Belarus",
+  "birth": {
+    "date": "1975-04-03",
+    "country": "Belarus",
+    "city": "Minsk"
+  },
+  "authorDescription": "Oracal Java trainer"
+}
